@@ -1,126 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.boscotec.bizcard.MainActivity">
 
-   <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/biz"
-        android:scaleType="centerCrop" />
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/biz" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center"
+            android:text="@string/company_name"
+
+            android:textColor="#ffffff"
+            android:textSize="50sp"
+
+            />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contact_us"
+        android:textSize="20sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BoscoTEC Inc"
-        android:layout_centerInParent="true"
-        android:textSize="50sp"
-        android:textColor="#000000"
-        />
+        android:drawableLeft="@drawable/ic_action_place"
+        android:drawableStart="@drawable/ic_action_place"
+        style="@style/TextViewStyle"
+        android:text="@string/contact_address" />
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_ring_volume"
+        android:drawableStart="@drawable/ic_action_ring_volume"
+        style="@style/TextViewStyle"
+        android:text="@string/contact_telephone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_action_place"
+        android:drawableStart="@drawable/ic_action_place"
+        style="@style/TextViewStyle"
+        android:text="@string/contact_email" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@android:color/background_light"
+        style="@style/TextViewStyle"
+        android:text="@string/contact_slogan"
+        />
 
-        android:layout_alignParentBottom="true"
-        android:id="@+id/linearLayout">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Contact us:"
-            android:layout_margin="5dp"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:id="@+id/textView" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_place"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_address"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="#000000"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_place"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_telephone"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="#000000"
-                />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_action_place"
-                android:scaleType="centerCrop" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contact_email"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="#000000"
-                />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_hours"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:padding="3dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="#000000"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/contact_slogan"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:padding="3dp"
-            android:fontFamily="sans-serif-condensed"
-            android:textColor="#000000"
-            />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>

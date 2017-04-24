@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TextViewStyle">
+        <!-- Customize your theme here. -->
+        <item name="android:layout_marginBottom">@dimen/margin_bottom</item>
+        <item name="android:layout_marginTop">@dimen/margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/margin_left</item>
+        <item name="android:layout_marginStart">@dimen/margin_left</item>
+        <item name="android:layout_marginEnd">@dimen/margin_right</item>
+        <item name="android:layout_marginRight">@dimen/margin_right</item>
+        <item name="android:gravity">center</item>
+        <item name="android:color">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
 </resources>
