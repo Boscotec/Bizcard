@@ -4,73 +4,141 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bg"
     tools:context="com.boscotec.bizcard.MainActivity">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
 
         <ImageView
             android:id="@+id/img"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/biz"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/logo"
             android:contentDescription="@string/company_logo"
+            android:layout_gravity="center"
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_gravity="center"
-            android:text="@string/company_name"
+            android:textColor="@color/green"
+            android:textSize="60sp"
+            android:text="@string/company_name" />
 
-            android:textColor="#ffffff"
-            android:textSize="50sp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="@string/contact_slogan" />
 
+    </LinearLayout>
+
+<!--
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:scaleType="centerCrop"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/company_logo"
+            android:layout_gravity="center_horizontal"
             />
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="60sp"
+
+                android:text="@string/company_name"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+
+                android:text="@string/contact_slogan"
+                />
+
+        </LinearLayout>
+
     </FrameLayout>
+-->
 
-    <TextView
-        android:id="@+id/textView"
-        style="@style/TextViewStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/contact_us"
-        android:textSize="20sp" />
-
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_action_place"
-        android:drawableStart="@drawable/ic_action_place"
-        style="@style/TextViewStyle"
-        android:text="@string/contact_address" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="end"
+        android:layout_margin="5dp" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_action_ring_volume"
-        android:drawableStart="@drawable/ic_action_ring_volume"
-        style="@style/TextViewStyle"
-        android:text="@string/contact_telephone" />
+        <TextView
+            android:id="@+id/textView"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_us"
+            android:layout_gravity="center"
+            android:textSize="20sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_action_place"
-        android:drawableStart="@drawable/ic_action_place"
-        style="@style/TextViewStyle"
-        android:text="@string/contact_email" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_location"
+            android:drawableStart="@drawable/ic_location"
+            style="@style/TextViewStyle"
+            android:text="@string/contact_address" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/TextViewStyle"
-        android:text="@string/contact_slogan"
-        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_watsapp"
+            android:drawableStart="@drawable/ic_watsapp"
+            style="@style/TextViewStyle"
+            android:text="@string/contact_telephone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableStart="@drawable/ic_email"
+            style="@style/TextViewStyle"
+            android:text="@string/contact_email" />
+
+    </LinearLayout>
 
 </LinearLayout>
